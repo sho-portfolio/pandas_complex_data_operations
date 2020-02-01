@@ -17,7 +17,7 @@ print(right)
 
 print(pd.merge_asof(left, right, left_index=True, right_index=True)) #defualt direction in backward
 print(pd.merge_asof(left, right, left_index=True, right_index=True, direction='forward'))
-'''
+```
 
 - references:
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.merge_asof.html
