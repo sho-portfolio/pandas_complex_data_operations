@@ -17,6 +17,10 @@ print(right)
 
 print(pd.merge_asof(left, right, left_index=True, right_index=True)) #defualt direction in backward
 print(pd.merge_asof(left, right, left_index=True, right_index=True, direction='forward'))
+
+
+-- note that if you don't have an index on your dataframe because you applied a groupby to it you may need to add you should add "as_index=False" to the code that applies the group by, for example: df = (df[df['account_id'] == '37453'].groupby(['account_id', 'date'], as_index=False).agg({'amount_bal': lambda x: x.sum(min_count=1, skipna=False)}))
+
 ```
 
 - references:
